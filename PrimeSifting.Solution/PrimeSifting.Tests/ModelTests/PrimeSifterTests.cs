@@ -24,7 +24,8 @@ namespace PrimeSifting.Tests
       // Arrange
       List<int> controlList = new List<int> {};
       // Act
-      List<int> testList = PrimeSifter.GetPrimes();
+      PrimeSifter sifter = new PrimeSifter(1);
+      List<int> testList = sifter.GetPrimes();
       // Assert
       CollectionAssert.AreEqual(controlList, testList); 
     }
@@ -33,11 +34,11 @@ namespace PrimeSifting.Tests
     public void GetPrimes_ReturnListOfNumbersUpToInput_NumbersList()
     {
       // Arrange
-      List<int> controlList = new List<int> {1,2,3,4,5};
+      List<int> controlList = new List<int> {2,3,4,5};
       // Act
       PrimeSifter sifter = new PrimeSifter(5);
       // Assert
-      CollectionAssert.AreEqual(controlList, PrimeSifter.GetPrimes());
+      CollectionAssert.AreEqual(controlList, sifter.GetPrimes());
     }
   }
 }
