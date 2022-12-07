@@ -45,9 +45,9 @@ namespace PrimeSifting.Tests
     public void GetPrimes_ReturnListOfPrimes_NumbersList()
     {
       // Arrange
-      List<int> controlList = new List<int> {2,3,5};
+      List<int> controlList = new List<int> {2,3,5,7,11,13,17,19};
       // Act
-      PrimeSifter sifter = new PrimeSifter(5);
+      PrimeSifter sifter = new PrimeSifter(20);
       // Assert
       CollectionAssert.AreEqual(controlList, sifter.GetPrimes());
     }
