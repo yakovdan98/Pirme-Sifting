@@ -26,7 +26,14 @@ namespace PrimeSifting.Tests
       // Act
       List<int> testList = PrimeSifter.GetPrimes();
       // Assert
-      Assert.AreEqual(controlList, testList); 
+      CollectionAssert.AreEqual(controlList, testList); 
+    }
+
+    [TestMethod]
+    public void GetPrimes_ReturnListOfNumbers_PrimeList()
+    {
+      // Arrange
+
     }
   }
 }
