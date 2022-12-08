@@ -51,5 +51,53 @@ namespace PrimeSifting.Tests
       // Assert
       CollectionAssert.AreEqual(controlList, sifter.GetPrimes());
     }
+
+    [TestMethod]
+    public void RockPaperScissors_ReturnIfItsaDraw_True()
+    {
+      // Arrange
+      string player1 = "rock";
+      string player2 = "rock";
+      // Act
+      string result = PrimeSifter.RockPaperScissors(player1, player2);
+      // Assert
+      Assert.AreEqual("It's a tie", result);
+    }
+
+    [TestMethod]
+    public void RockPaperScissors_ReturnIfPaperBeatsRock_Player2Wins()
+    {
+      // Arrange
+      string player1 = "rock";
+      string player2 = "paper";
+      // Act
+      string result = PrimeSifter.RockPaperScissors(player1, player2);
+      // Assert
+      Assert.AreEqual("Player 2 wins", result);
+    }
+
+    [TestMethod]
+    public void RockPaperScissors_ReturnIfRockBeatsScissors_Player2Wins()
+    {
+      // Arrange
+      string player1 = "rock";
+      string player2 = "paper";
+      // Act
+      string result = PrimeSifter.RockPaperScissors(player1, player2);
+      // Assert
+      Assert.AreEqual("Player 2 wins", result);
+    }
+
+    [TestMethod]
+    public void RockPaperScissors_ReturnIfScissorsBeatPaper_Player1Wins()
+    {
+      // Arrange
+      string player1 = "scissors";
+      string player2 = "paper";
+      // Act
+      string result = PrimeSifter.RockPaperScissors(player1, player2);
+      // Assert
+      Assert.AreEqual("Player 1 wins", result);
+    }
   }
 }
